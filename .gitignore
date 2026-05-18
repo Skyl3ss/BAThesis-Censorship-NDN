@@ -1,2 +1,4 @@
 /.vscode
-/notes.md
+notes.md
+.gitignore
+network_analysis/20251201.as-rel.txt
