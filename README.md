@@ -7,7 +7,7 @@ A project for analyzing Named Data Networking (NDN) censorship with topologies d
 ### 1. Install Mini-NDN
 
 Mini-NDN requires Ubuntu Linux 20.04. To install Mini-NDN follow the directions to install the docker version on
-https://minindn.memphis.edu/install.html#building-your-own-docker-image .
+https://minindn.memphis.edu/install.html#using-docker.
 
 ### 2. Get CAIDA Dataset
 
