@@ -68,7 +68,7 @@ def run_trial(trial_num, topo_file, entry_node_name, num_censored):
     producer.cmd(f'nlsrc advertise {prefix}')
     info(f"Starting ping server on {producer.name}...\n")
     getPopen(producer, f"ndnpingserver {prefix}")
-    info("Waiting 120s for convergence\n")
+    info("Waiting for NLSR to sync...\n")
     time.sleep(120)
     
 
@@ -114,7 +114,7 @@ def run_trial(trial_num, topo_file, entry_node_name, num_censored):
             censor = chaos_candidates[step-1]
             info(f">>> Step {step}: CENSORING {prefix} ON {censor.name} <<<\n")
             
-            # Applying the content filte to simulate censorship
+            # Applying the content filter to simulate censorship
             # 1. Remove all existing routes for this prefix so the node "forgets" how to reach the producer
             censor.cmd(f'nlsrc withdraw {prefix}')
             faces_output = censor.cmd(f"nfdc fib list | grep -w '{prefix}' | grep -oP 'faceid=\\K\\d+'").split()

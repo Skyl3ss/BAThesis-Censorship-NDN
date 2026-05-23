@@ -1,14 +1,3 @@
-"""
-Usage:
-    sudo python3 scenario3.py your_topo.conf
-
-Node roles (edit constants below to reassign):
-    n0 = Root CA  (generates /root cert, signs producer cert)
-    n1 = Producer (identity /root/site1, signs every data packet)
-    n2 = Consumer (validates data against the certificate chain)
-    All other nodes forward traffic as part of the NDN fabric.
-"""
-
 import os
 import time
 import re

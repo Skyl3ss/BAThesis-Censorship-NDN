@@ -42,7 +42,7 @@ def run_trial(iteration, node_count, run_duration):
     poisoner.cmd(f'nlsrc advertise {prefix}')
     
     info("Waiting for NLSR to sync...\n")
-    time.sleep(240) # Let nslr sync
+    time.sleep(120)
 
     # The Consumers pull the data for a fixed duration
     end_time = time.time() + run_duration
