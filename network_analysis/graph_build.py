@@ -96,7 +96,7 @@ def visualize_mini_internet(G):
     labels = {n: n for n in G.nodes() if d[n] > max(d.values()) * 0.2}
     nx.draw_networkx_labels(G, pos, labels=labels, font_size=10, font_weight='bold') 
 
-    plt.title(f"Topology with 50 Nodes\nλ₂ ≈ {get_normalized_lambda2(G):.4f}")
+    plt.title(f"Topology with 50 Nodes\nλ₂ ≈ {get_normalized_lambda2(G):.4f}", fontsize=14)
     plt.colorbar(nodes, label='Degree (Connections)')
     plt.axis('off')
     plt.show()
@@ -164,8 +164,8 @@ if __name__ == "__main__":
     # Config Variables
     visualize = True
     generate_caida = False
-    generate_ndn_config = True
-    Target_Nodes = 10
+    generate_ndn_config = False
+    Target_Nodes = 50
 
     mini_ndn_graph = generate_mini_as_fit(target_nodes = Target_Nodes)
 

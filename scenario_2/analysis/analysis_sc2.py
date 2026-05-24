@@ -104,9 +104,8 @@ def draw_graph(graph, labels, colors, output_path):
             ("poisoner", COLOR_MAP["3"]),
         ]
     ]
-    plt.legend(handles=legend_handles, loc="upper right", framealpha=0.9)
+    plt.legend(handles=legend_handles, loc="upper right", framealpha=0.9, fontsize=18)
     plt.axis("off")
-    plt.title("Content Distribution across the Network", fontsize=16)
     plt.tight_layout()
     plt.savefig(output_path, dpi=200)
     plt.close()
